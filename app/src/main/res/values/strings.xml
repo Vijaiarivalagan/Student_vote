@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Student_vote</string>
+    <string-array name="ldept">
+        <item>CSE</item>
+        <item>IT</item>
+        <item>ECE</item>
+        <item>EEE</item>
+        <item>CIVIL</item>
+        <item>MECH</item>
+        <item>MCT</item>
+    </string-array>
+</resources>
