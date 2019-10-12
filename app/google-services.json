@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "350800411949",
+    "firebase_url": "https://studentvote-89999.firebaseio.com",
+    "project_id": "studentvote-89999",
+    "storage_bucket": "studentvote-89999.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350800411949:android:a4fa79d3f963d34b7be7a4",
+        "android_client_info": {
+          "package_name": "com.geforce.vijai.student_vote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "350800411949-pa5027nbs1unehvk7mpjbudlm823i82a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geforce.vijai.student_vote",
+            "certificate_hash": "5d29f7f171a8737f978c15c470023f5c1549fc3e"
+          }
+        },
+        {
+          "client_id": "350800411949-mdvco1r05mud8b48n2qb343s1vqmc1nj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxQNfbXlV30o1GkyIgplY7Y7xmSi-kX14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "350800411949-mdvco1r05mud8b48n2qb343s1vqmc1nj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

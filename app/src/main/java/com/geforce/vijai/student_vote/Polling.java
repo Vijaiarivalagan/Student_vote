@@ -82,8 +82,11 @@ public class Polling extends AppCompatActivity {
                 poll_url+=polling_data;
                 //Toast.makeText(getApplicationContext(),poll_url, Toast.LENGTH_LONG).show(); // print the value of selected super star
                 poll.setEnabled(false);
-                polling(poll_url);
-                poll_url="http://vijai1.eu5.org/sona/polling.php";
+                Intent i =new Intent(getApplicationContext(),otp_verify.class);
+                i.putExtra("poll_url",poll_url);
+                startActivity(i);
+                //
+                //poll_url="http://vijai1.eu5.org/sona/polling.php";
             }
         });
     }
@@ -132,50 +135,6 @@ public class Polling extends AppCompatActivity {
         can4.setText(candidate_name[3]);
     }
 
-       private void polling(String url) {
 
-        Log.d( "url: ",url);
-
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, poll_url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-
-                    JSONObject jsonObject=new JSONObject(response);
-                    String message=jsonObject.getString("message");
-                    boolean error=jsonObject.getBoolean("error");
-                    if(!error){
-
-                        Intent i =new Intent(getApplicationContext(),status.class);
-                        //i.setFlags(i.FLAG_ACTIVITY_CLEAR_TASK | i.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(i);
-                        finish();
-                    }
-                    else {
-                        poll.setEnabled(true);
-                        Toast.makeText(getApplicationContext(),""+message.toString(),Toast.LENGTH_LONG).show();
-                        return;
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    poll.setEnabled(true);
-                    Toast.makeText(getApplicationContext(),"error"+e.toString(),Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                poll.setEnabled(true);
-                Toast.makeText(getApplicationContext(),""+error.toString(),Toast.LENGTH_LONG).show();
-            }
-        });
-        RequestQueue requestQueue= Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-        //Toast.makeText(getApplicationContext(),"user login destroy",Toast.LENGTH_SHORT).show();
-            poll_url="http://vijai1.eu5.org/sona/polling.php";
-    }
 
 }

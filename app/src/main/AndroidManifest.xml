@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".otp_verify"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".Login">
             <intent-filter>
@@ -20,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Polling" />
-        <activity android:name=".status"></activity>
+        <activity android:name=".status" />
     </application>
 
 </manifest>

@@ -20,7 +20,6 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences sp;
-
     String reg_no,url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Intent i =new Intent(getApplicationContext(),Polling.class);
                         startActivity(i);
-                        finish();
+
 
                     }
                     else {
@@ -86,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
         });
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
-
 
     }
 
